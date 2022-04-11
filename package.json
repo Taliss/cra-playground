@@ -65,8 +65,10 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "start:build": "serve -l 3005 -s build",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "prettier": "prettier --check .",
     "lint": "eslint ."
   },
   "eslintConfig": {
@@ -142,5 +144,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.6.2",
+    "serve": "^13.0.2"
   }
 }
