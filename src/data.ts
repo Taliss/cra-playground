@@ -29,18 +29,18 @@ let invoices = [
     amount: '$4,600',
     due: '01/27/1998',
   },
-];
+]
 
 export function getInvoices() {
-  return invoices;
+  return invoices
 }
 
-export function getInvoice(number: number ): { name: string, number: number, amount: string, due: string } | undefined {
-  return invoices.find((invoice) => invoice.number === number);
+export function getInvoice(
+  number: number
+): { name: string; number: number; amount: string; due: string } | undefined {
+  return invoices.find((invoice) => invoice.number === number)
 }
 
 export function deleteInvoice(number: number | undefined) {
-  invoices = invoices.filter(
-    (invoice) => invoice.number !== number
-  );
+  invoices = invoices.filter((invoice) => invoice.number !== number)
 }
