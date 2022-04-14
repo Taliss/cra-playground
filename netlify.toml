@@ -1,0 +1,17 @@
+[build]
+  publish = "build/"
+  command = "npm run build"
+
+[context.production]
+  environment = { REACT_APP_API_URL = "http://prod.someurl/api"}
+
+[context.deploy-preview]
+  environment = { REACT_APP_API_URL = "http://deploy-preview.someurl/api"}
+
+[context.branch-deploy]
+  environment = { REACT_APP_API_URL = "http://branch-deploy.someurl/api"}
+
+[[redirects]]
+  from = "/*"
+  to= "/index.html"
+  status = 200

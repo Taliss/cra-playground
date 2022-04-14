@@ -1,11 +1,11 @@
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { getInvoice, deleteInvoice } from '../data';
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
+import { getInvoice, deleteInvoice } from '../data'
 
 export default function Invoice() {
-  const navigate = useNavigate();
-  const params = useParams();
-  const location = useLocation();
-  const invoice = getInvoice(parseInt(params.invoiceId || '', 10));
+  const navigate = useNavigate()
+  const params = useParams()
+  const location = useLocation()
+  const invoice = getInvoice(parseInt(params.invoiceId || '', 10))
 
   return (
     <main style={{ padding: '1rem' }}>
@@ -17,13 +17,13 @@ export default function Invoice() {
       <p>
         <button
           onClick={() => {
-            deleteInvoice(invoice?.number);
-            navigate('/invoices' + location.search);
+            deleteInvoice(invoice?.number)
+            navigate('/invoices' + location.search)
           }}
         >
           DELETE
         </button>
       </p>
     </main>
-  );
+  )
 }

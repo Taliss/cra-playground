@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <h1>Test Netlify ENVs: {process.env.REACT_APP_API_URL}, hi</h1>
       <h1>Bookkeeper</h1>
       <nav
         style={{
@@ -11,12 +12,11 @@ function App() {
           paddingBottom: '1rem',
         }}
       >
-        <Link to="/invoices">Invoices</Link> |{' '}
-        <Link to="/expenses">Expenses</Link>
+        <Link to="/invoices">Invoices</Link> | <Link to="/expenses">Expenses</Link>
         <Outlet />
       </nav>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
