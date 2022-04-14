@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom'
 function App() {
   return (
     <div>
-      <h1>Test Netlify Deploy-Preview</h1>
+      <h1>Test Netlify ENVs: {process.env.REACT_APP_API_URL}, hi</h1>
       <h1>Bookkeeper</h1>
       <nav
         style={{
